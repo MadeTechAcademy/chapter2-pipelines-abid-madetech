@@ -2,7 +2,7 @@ name: Check Links 2
 run-name: ${{github.actor}} is checking links (exercise 2)
 on:
   schedule:
-    - cron: '50 11 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 jobs:
   check_links_2:
