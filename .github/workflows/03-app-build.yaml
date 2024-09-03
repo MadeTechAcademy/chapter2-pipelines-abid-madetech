@@ -18,12 +18,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: 'npm' 
+          # cache: 'npm' 
           # The cache is to speed up future runs
       
-      - name: Move into app directory
-        run: cd app
-        
       - name: Install dependencies
         run: npm install
         working-directory: ./app
