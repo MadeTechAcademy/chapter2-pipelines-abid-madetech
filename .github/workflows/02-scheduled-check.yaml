@@ -3,7 +3,7 @@ run-name: ${{github.actor}} is checking links (exercise 2)
 on:
   schedule:
     - cron: '45 11 * * *'
-  workflow_dispatch
+  workflow_dispatch:
 jobs:
   check_links_2:
     runs-on: ubuntu-latest
