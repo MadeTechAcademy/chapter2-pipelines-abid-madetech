@@ -10,23 +10,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    # - name: Move in to working directory
-
-    - name: Set up Docker build
-      uses: docker/setup-buildx-action@v2
-
     - name: Build and tag the Docker image
       run: |
         docker build -t docker-node-app:latest .
-      working-directory: ./app
+      working-directory: ./docker-app
 
 
     - name: Show Docker image build history
       run: |
         docker history docker-node-app:latest
-      working-directory: ./app
-
-    - name: Push Docker image to Docker Hub
-      run: |
-        docker push docker-node-app:latest
-      working-directory: ./app
+      working-directory: ./docker-app
