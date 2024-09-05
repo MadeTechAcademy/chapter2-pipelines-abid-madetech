@@ -32,3 +32,4 @@ We would like the pipeline to run on each push to `main`
 
 ## Notes
 - The insecure part would be the exposed PAT
+- without the PAT - an error message was thrown stating: npm error 401 Unauthorized - GET https://npm.pkg.github.com/@tess-barnes-mt%2fbasic-node-lib - unauthenticated: User cannot be authenticated with the token provided.
