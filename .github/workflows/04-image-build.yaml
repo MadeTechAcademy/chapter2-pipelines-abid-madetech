@@ -18,11 +18,15 @@ jobs:
     - name: Build and tag the Docker image
       run: |
         docker build -t docker-node-app:latest .
+      working-directory: ./app
+
 
     - name: Show Docker image build history
       run: |
         docker history docker-node-app:latest
+      working-directory: ./app
 
     - name: Push Docker image to Docker Hub
       run: |
         docker push docker-node-app:latest
+      working-directory: ./app
