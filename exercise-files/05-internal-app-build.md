@@ -9,7 +9,7 @@ We need a pipeline to checkout the code, install the private dependencies, and r
 
 We would like the pipeline to run on each push to `main`
 
-- Create the configuration for the pipeline in the `06-internal-app-build.yaml` file including name, trigger, and job that runs on ubuntu-latest.
+- Create the configuration for the pipeline in the `05-internal-app-build.yaml` file including name, trigger, and job that runs on ubuntu-latest.
 - Add steps to the job which check out the code, support the node environment and run the necessary commands.
 - Move the config file into `.github/workflows` folder and commit & push your code.
 - Use the github web interface to find the pipeline and check the logs.
@@ -22,7 +22,7 @@ We would like the pipeline to run on each push to `main`
 - Invalidate your github PAT
 
 ## Questions (write your answers in the notes section):
-- Which part of this is pipeline is insecure and why?
+- Which part of this pipeline is insecure and why?
 - What else could go wrong?
 
 ## Hints
@@ -31,4 +31,4 @@ We would like the pipeline to run on each push to `main`
 - Check the available runnable npm `scripts` in the `package.json` file
 
 ## Notes
-
+- The insecure part would be the exposed PAT
