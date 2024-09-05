@@ -20,6 +20,8 @@ jobs:
           node-version-file: './internal-app/.nvmrc'
       
       - name: Install dependencies
+        env:
+          NPM_PAT: ${{ secrets.NPM_PAT }}
         run: npm install
         working-directory: ./internal-app
 
