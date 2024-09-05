@@ -36,4 +36,4 @@ Using environment variables in github workflows: [Github docs](https://docs.gith
 - Check the docker deep dive course for an example of environment variable references in the `.npmrc` file
 
 ## Notes
-
+- The part of this pipeline that is not ideal is the usage of PATs as they are "personal" access tokens. In a real project you shouldn't be too dependant or tied down to a person
