@@ -31,5 +31,5 @@ We would like the pipeline to run on each push to `main`
 - Check the available runnable npm `scripts` in the `package.json` file
 
 ## Notes
-- The insecure part would be the exposed PAT
+- The insecure part would be the exposed PAT. This would mean that someone can access that PAT and use it for themselves. Depending on what is in the private package, this could be detrimental. 
 - without the PAT - an error message was thrown stating: npm error 401 Unauthorized - GET https://npm.pkg.github.com/@tess-barnes-mt%2fbasic-node-lib - unauthenticated: User cannot be authenticated with the token provided.
