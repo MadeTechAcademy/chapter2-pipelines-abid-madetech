@@ -11,3 +11,4 @@ How would you recreate that task in a github action pipeline that was manually t
 - Assuming that there are some broken links on the Madetech Learn website, do you expect the pipeline to pass or fail?
 
 ## Notes
+Since some links are broken, I am expecting the pipeline to fail.

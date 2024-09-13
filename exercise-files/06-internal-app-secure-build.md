@@ -11,7 +11,7 @@ We would like the pipeline to run on each push to `main` and also to be triggere
 
 - Create a new **short-lived** [CLASSIC Personal Access Token](https://github.com/settings/tokens/new?scopes=read:packages) in github with read:packages permissions and copy the value
 - Update the token in the `.npmrc` file with an environment variable reference.
-- Create the configuration for the pipeline in the `07-internal-app-secure-build.yaml` file including name, trigger, and job that runs on ubuntu-latest.
+- Create the configuration for the pipeline in the `06-internal-app-secure-build.yaml` file including name, trigger, and job that runs on ubuntu-latest.
 - Add steps to the job which check out the code, support the node environment and run the necessary commands.
 - Move the config file into `.github/workflows` folder and commit & push your code.
 - Use the github web interface to find the pipeline and check the logs
@@ -36,4 +36,4 @@ Using environment variables in github workflows: [Github docs](https://docs.gith
 - Check the docker deep dive course for an example of environment variable references in the `.npmrc` file
 
 ## Notes
-
+- The part of this pipeline that is not ideal is the usage of PATs as they are "personal" access tokens. In a real project you shouldn't be too dependant or tied down to a person

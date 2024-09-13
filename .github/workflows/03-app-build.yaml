@@ -1,0 +1,32 @@
+name: Build and Test App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build: 
+  # this can be called anything else like "build-app"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./app
+
+      - name: Run Prettier
+        run: npm run prettify
+        working-directory: ./app
+
+      - name: Run tests
+        run: npm test
+        working-directory: ./app

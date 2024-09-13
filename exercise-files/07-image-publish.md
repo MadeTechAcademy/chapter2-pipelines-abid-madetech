@@ -23,4 +23,3 @@ For now (and the purposes of this exercise) we will need to trigger the pipeline
 Pushing images to github container registry: [github docs]{https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images#publishing-images-to-github-packages}
 
 ## Notes
-
